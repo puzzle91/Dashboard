@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#bar-chart-attack.x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}    
+</style>
+
+
+
+
+    <title>Graphs Page</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+    
+</head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Shark Attack Statistics</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+        <div id="bar-chart-attack">Attacks By Country</div>
+<div class="container-fluid">
+        <div class="row">
+            <div id="container" class="col-lg-12">
+                <div class="chart-wrapper">
+                    
+            <div class="chart-stage">
+                <div id="country-chart"></div>
+            </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="bar-chart-activity">Attacks Per Activity</div>
+<div class="container-fluid">
+        <div class="row">
+            <div id="container" class="col-lg-12">
+                <div class="chart-wrapper">
+            <div class="chart-stage">
+                <div id="Activity-chart"></div>
+            </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="survival-chart">Fatality Chart (Y/N)
+</div>
+<div class="container-fluid">
+        <div class="row">
+            <div id="container" class="col-lg-12">
+                <div class="chart-wrapper">
+            <div class="chart-stage">
+                <div id="survival-pie-chart"></div>
+            </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<div id="time-chart">Attack Time Line</div>
+<div class="container-fluid">
+        <div class="row">
+            <div id="container" class="col-lg-12">
+            
+                
+            <div class="chart-stage">
+                <div id="time-bar-chart"></div>
+            </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="years-chart"></div>
+<div class="container-fluid">
+        <div class="row">
+            <div id="container" class="col-lg-12">
+                <div class="chart-wrapper">
+                    <div class="chart-title">Years Time-Line</div>
+            <div class="chart-stage">
+                <div id="years-bar-chart"></div>
+            </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="area-chart">Area Chart</div>
+<div class="container-fluid">
+        <div class="row">
+            <div id="container" class="col-lg-12">
+                <div class="chart-wrapper">
+            <div class="chart-stage">
+            
+            </div>
+
+
+  <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+  <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+    </body>
