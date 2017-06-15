@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-
-#bar-chart-attack.x.axis text {
-    text-anchor: end !important;
-    transform: rotate(-45deg);
-}    
-</style>
-
-
-
-
     <title>Graphs Page</title>
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
     <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='custom.css')}}">
     
 </head>
     <body>
 
+<!--<div class="col-sm-12">
         <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Shark Attack Statistics</a>
+    <div class="navbar-header"> 
+      <a class="navbar-brand" href="#">Statistics on Shark Attacks</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
+      <!--<li><a href="#">Page 1</a></li>-->
     </ul>
   </div>
 </nav>
+</div>
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+  <img class="w3-image" src="http://universalmonstersuniverse.com/wp-content/uploads/2016/07/jaws.jpg" alt="Me" width="1500" height="600">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 style="padding-left:600px; color:white">Shark Attack</h1>
+    <h4 class="sub-title" style="padding-left:520px">Select a country to view country-specific statistics</h4>
+  </div>
+  
+
+<div class="col-sm-12">
+        
+          <div class="chart-title">
+          </div>
+          <div class="chart-stage">
+            <div id="menu-select"></div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+
         <div id="bar-chart-attack">Attacks By Country</div>
 <div class="container-fluid">
         <div class="row">
             <div id="container" class="col-lg-12">
-                <div class="chart-wrapper">
                     
             <div class="chart-stage">
                 <div id="country-chart"></div>
@@ -52,7 +64,6 @@
 <div class="container-fluid">
         <div class="row">
             <div id="container" class="col-lg-12">
-                <div class="chart-wrapper">
             <div class="chart-stage">
                 <div id="Activity-chart"></div>
             </div>
@@ -61,14 +72,14 @@
         </div>
 </div>
 
-<div id="survival-chart">Fatality Chart (Y/N)
+<div id="survival-chart"><h4 style="padding-left:200px">Fatal? (Y/N)</h4>
 </div>
 <div class="container-fluid">
         <div class="row">
-            <div id="container" class="col-lg-12">
-                <div class="chart-wrapper">
-            <div class="chart-stage">
+            <div id="container" class="col-lg-6">
                 <div id="survival-pie-chart"></div>
+                <div id="injury-chart"><h4 style="padding-left:100px" >Injury Type</h4></div>
+                <div id="area-chart"><h4 style="padding-left:90px">Area of Attack</h4></div>
             </div>
                 </div>
             </div>
@@ -81,9 +92,6 @@
         <div class="row">
             <div id="container" class="col-lg-12">
             
-                
-            <div class="chart-stage">
-                <div id="time-bar-chart"></div>
             </div>
                 </div>
             </div>
@@ -94,8 +102,6 @@
 <div class="container-fluid">
         <div class="row">
             <div id="container" class="col-lg-12">
-                <div class="chart-wrapper">
-                    <div class="chart-title">Years Time-Line</div>
             <div class="chart-stage">
                 <div id="years-bar-chart"></div>
             </div>
@@ -104,12 +110,16 @@
         </div>
 </div>
 
-<div id="area-chart">Area Chart</div>
+<div id="attacks-per-year"></div>
 <div class="container-fluid">
         <div class="row">
             <div id="container" class="col-lg-12">
-                <div class="chart-wrapper">
             <div class="chart-stage">
+                <div id="years-bar-chart"></div>
+
+<div class="container-fluid">
+        <div class="row">
+            <div id="container" class="col-lg-12">
             
             </div>
 

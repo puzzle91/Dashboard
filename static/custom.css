@@ -1,0 +1,92 @@
+#bar-chart-attack .x.axis text { 
+        text-anchor: end !important;     
+        transform: rotate(-15deg);
+        color:white
+         }
+
+#bar-chart-attack {
+
+
+/*width: 1400px;*/
+/*padding: 9px 15px;*/
+/*background-color: #0e5e7f;*/
+color: white;
+margin-bottom: 20px;
+margin-top: 20px;
+border-radius: 5px;
+}
+      
+
+#bar-chart-activity .x.axis text    { 
+        text-anchor: end !important;     
+        transform: rotate(-25deg);
+        color:white
+         }    
+
+#years-chart .x.axis text {
+    text-anchor: end !important;     
+        transform: rotate(-45deg);
+
+}
+
+#bar-chart-attack .y.axis text {
+    padding-left: 200px;
+} 
+
+body {
+    background-color: #0e5e7f
+
+}
+
+#survival-chart {
+
+padding-left: 100px;
+color:white
+}
+
+#area-chart {
+
+color:white
+
+}
+
+#injury-chart {
+
+color:white
+
+}
+
+#bar-chart-activity {
+
+color:white
+
+}
+
+#time-chart {
+
+color:white
+
+}
+
+#title {
+
+    padding-left: 100px
+
+
+}
+
+background {
+
+    color:#0e5e7f
+}
+
+#menu-select {
+
+    padding-left:600px
+}
+
+#chart-title {
+
+    padding-left: 550px
+}
+
