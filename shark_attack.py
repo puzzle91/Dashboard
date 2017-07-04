@@ -5,11 +5,16 @@ import json
  
 app = Flask(__name__)
  
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'SharkAttack'
-COLLECTION_NAME = 'attacks'
- 
+# MONGODB_HOST = 'localhost'
+# MONGODB_PORT = 27017
+# DBS_NAME = 'SharkAttack'
+# COLLECTION_NAME = 'attacks'
+
+MONGODB_URI = os.environ.get('MONGODB_URI')
+DBS_NAME = os.environ.get("MONGO_DB_NAME", 'SharkAttack')
+COLLECTION_NAME = os.environ.get ('MONGO_COLLECTION_NAME', 'attacks')
+
+
  
 @app.route("/")
 def index():
