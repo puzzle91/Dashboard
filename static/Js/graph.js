@@ -257,13 +257,13 @@ var YearChart = dc.lineChart("#years-chart")
 //     .brushOn(true);
 
 
-numberAttacksND
-       .formatNumber(d3.format("d"))
-       .valueAccessor(function (d) {
-           return d;
-       })
-       .group(all);
+// numberAttacksND
+//        .formatNumber(d3.format("d"))
+//        .valueAccessor(function (d) {
+//            return d;
+//        })
+//        .group(all);
  
-   dc.renderAll();
-}
+//    dc.renderAll();
+// }
 
