@@ -65,7 +65,7 @@ function makeGraphs(error, sharkJson) {
    var maxDate = dateDim.top(1)[0]["Date"];
  
    //Charts
-   var CountryBarChart = dc.barChart("#bar-chart-attack");
+var CountryBarChart = dc.barChart("#bar-chart-attack");
   
    CountryBarChart
        .width(1400)
@@ -81,7 +81,7 @@ function makeGraphs(error, sharkJson) {
        .yAxis().ticks(4);
 
 
-    var ActivityBarChart = dc.barChart("#bar-chart-activity");
+var ActivityBarChart = dc.barChart("#bar-chart-activity");
 
 
     ActivityBarChart
@@ -99,7 +99,7 @@ function makeGraphs(error, sharkJson) {
 
 var TypeChart = dc.pieChart("#injury-chart")
 
-TypeChart
+        TypeChart
        .height(220)
        .radius(90)
        .innerRadius(40)
@@ -133,7 +133,6 @@ var AreaChart = dc.pieChart("#area-chart")
 
 
 var YearChart = dc.lineChart("#years-chart")  
-    // debugger;
     YearChart
     .width(1400)
        .height(400)
@@ -151,6 +150,9 @@ var YearChart = dc.lineChart("#years-chart")
        .dimension(Country)
        .group(numofattacks);
 
+
+       dc.renderAll();
+}
 
 // var surfAttacksByCountry = countryDim.group().reduceSum(function (d) {
 //     if (d.Activity === 'Surfing' && d.Country === "USA", "AUSTRALIA", "SOUTH AFRICA") {
