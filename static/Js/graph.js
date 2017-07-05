@@ -1,5 +1,5 @@
 queue()
-   .defer(d3.json, "/SharkAttack/attacks")
+   .defer(d3.json, "/SharkAttack/attacks2")
    .await(makeGraphs);
  
 function makeGraphs(error, sharkJson) {
