@@ -178,7 +178,7 @@ var SpeciesBarChart = dc.barChart("#bar-chart-species");
 
 var all = ndx.groupAll();
     var totalAttacksND = ndx.groupAll().reduceSum(function (d) {
-        return d["#total-attacks"];
+        return d["Country"];
     });
 
 var totalAttacksND = dc.numberDisplay("#total-attacks");
