@@ -38,7 +38,7 @@ def donor_projects():
         'Year': True, 'Type': True,
         'Country': True, 'Area': True, 'Location': True,
         'Activity': True, 'Name': True, 'Sex': True,
-        'Age': True, 'Injury': True, 'Fatal (Y/N)': True,
+        'Age': True, 'Injury': True, 'Fatal': True,
         'Time': True, 'Species': True, 'Investigator or Source': True,
     }
  

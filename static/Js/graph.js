@@ -24,7 +24,7 @@ function makeGraphs(error, sharkJson) {
    });
 
    var FatalDim = ndx.dimension(function (d) {
-       return d["Fatal (Y/N)"];
+       return d["Fatal"];
    });
  
    var dateDim = ndx.dimension(function (d) {
