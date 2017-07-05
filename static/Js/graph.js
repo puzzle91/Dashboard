@@ -45,6 +45,10 @@ function makeGraphs(error, sharkJson) {
        return d["Injury"]
    });
 
+   var SpeciesDim = ndx.dimension(function (d) {
+       return d["Injury"]
+   });
+
    //Calculate metrics
 
    var numofattacks = Country.group();
@@ -59,7 +63,9 @@ function makeGraphs(error, sharkJson) {
 
    var InjuryType = InjuryDim.group();
 
+   var Species = SpeciesDim.group();
 
+   
    //Define values (to be used in charts)
    var minDate = dateDim.bottom(1)[0]["Date"];
    var maxDate = dateDim.top(1)[0]["Date"];
@@ -151,8 +157,27 @@ var YearChart = dc.lineChart("#years-chart")
        .group(numofattacks);
 
 
+var SpeciesBarChart = dc.barChart("#bar-chart-species");
+
+
+    SpeciesBarChart
+    .width(1400)
+       .height(400)
+       .margins({top: 10, right: 50, bottom: 30, left: 50})
+       .dimension(Species)
+       .group(SpeciesDim)
+       .transitionDuration(500)
+       .x(d3.scale.ordinal())
+       .xUnits(dc.units.ordinal)       
+       .elasticY(true)
+       .xAxisLabel("")
+       .yAxis().ticks(4);
+
+
        dc.renderAll();
 }
+
+
 
 // var surfAttacksByCountry = countryDim.group().reduceSum(function (d) {
 //     if (d.Activity === 'Surfing' && d.Country === "USA", "AUSTRALIA", "SOUTH AFRICA") {
