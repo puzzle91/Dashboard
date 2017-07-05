@@ -176,12 +176,12 @@ var SpeciesBarChart = dc.barChart("#bar-chart-species");
        .yAxis().ticks(4);
 
 
-// var all = ndx.groupAll();
-//     var totalAttacksND = ndx.groupAll().reduceSum(function (d) {
-//         return d["total_donations"];
-//     });
+var all = ndx.groupAll();
+    var totalAttacksND = ndx.groupAll().reduceSum(function (d) {
+        return d["#total-attacks"];
+    });
 
-// var totalAttacksND = dc.numberDisplay("#total-attacks");
+var totalAttacksND = dc.numberDisplay("#total-attacks");
 
 // totalAttacksND
 //        .formatNumber(d3.format("d"))
