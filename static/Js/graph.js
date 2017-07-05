@@ -183,12 +183,12 @@ var all = ndx.groupAll();
 
 var totalAttacksND = dc.numberDisplay("#total-attacks");
 
-// totalAttacksND
-//        .formatNumber(d3.format("d"))
-//        .valueAccessor(function (d) {
-//            return d;
-//        })
-//        .group(all);
+totalAttacksND
+       .formatNumber(d3.format("d"))
+       .valueAccessor(function (d) {
+           return d;
+       })
+       .group(all);
 
 
        dc.renderAll();
