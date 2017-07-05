@@ -103,7 +103,7 @@ var ActivityBarChart = dc.barChart("#bar-chart-activity");
        .xAxisLabel("")
        .yAxis().ticks(4);
 
-var TypeChart = dc.pieChart.slicesCap([15])("#injury-chart")
+var TypeChart = dc.pieChart("#injury-chart")
 
         TypeChart
        .height(220)
@@ -111,7 +111,8 @@ var TypeChart = dc.pieChart.slicesCap([15])("#injury-chart")
        .innerRadius(40)
        .transitionDuration(1500)
        .dimension(InjuryDim)
-       .group(InjuryType);
+       .group(InjuryType)
+       .slicesCap(15);
 
 
 
