@@ -135,7 +135,8 @@ var AreaChart = dc.pieChart("#area-chart")
     //    .innerRadius(40)
        .transitionDuration(1500)
        .dimension(AreaDim)
-       .group(AttackperArea);
+       .group(AttackperArea)
+       .slicesCap(25);
 
 
 
@@ -173,6 +174,18 @@ var SpeciesBarChart = dc.barChart("#bar-chart-species");
        .elasticY(true)
        .xAxisLabel("")
        .yAxis().ticks(4);
+
+
+
+
+var totalAttacksND = dc.numberDisplay("#total-attacks");
+
+totalAttacksND
+       .formatNumber(d3.format("d"))
+       .valueAccessor(function (d) {
+           return d;
+       })
+       .group(all);
 
 
        dc.renderAll();
@@ -284,14 +297,7 @@ var SpeciesBarChart = dc.barChart("#bar-chart-species");
 //         ])
 //     .brushOn(true);
 
-
-// numberAttacksND
-//        .formatNumber(d3.format("d"))
-//        .valueAccessor(function (d) {
-//            return d;
-//        })
-//        .group(all);
  
-//    dc.renderAll();
-// }
+  
+
 
