@@ -46,7 +46,7 @@ function makeGraphs(error, sharkJson) {
    });
 
    var SpeciesDim = ndx.dimension(function (d) {
-       return d["Injury"]
+       return d["Species"]
    });
 
    //Calculate metrics
@@ -165,8 +165,8 @@ var SpeciesBarChart = dc.barChart("#bar-chart-species");
     .width(1400)
        .height(400)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
-       .dimension(Species)
-       .group(SpeciesDim)
+       .dimension(SpeciesDim)
+       .group(Species)
        .transitionDuration(500)
        .x(d3.scale.ordinal())
        .xUnits(dc.units.ordinal)       
