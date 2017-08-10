@@ -65,6 +65,8 @@ function makeGraphs(error, sharkJson) {
 
    var Species = SpeciesDim.group();
 
+   var numperYear = YearsDim.group();
+
    
    //Define values (to be used in charts)
    var minDate = dateDim.bottom(1)[0]["Date"];
@@ -191,12 +193,52 @@ totalAttacksND
        .group(all);
 
        
-       
+var attacksPerYearByCountryChart = dc.compositeChart("#attacks-per-year");
+
+
+var usaAttacksPerYear = YearsDim.group().reduceSum(function (d){
+    if (d.Country === 'USA'){
+        return 1;
+    } else {
+        return 0;
+    }
+});
+var ausAttacksPerYear = YearsDim.group().reduceSum(function (d){
+    if (d.Country === 'AUSTRALIA'){
+        return 1;
+    } else {
+        return 0;
+    }
+});
+var saAttacksPerYear = YearsDim.group().reduceSum(function (d){
+    if (d.Country === 'SOUTH AFRICA'){
+        return 1;
+    } else {
+        return 0;
+    }
+});
+var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
+    if (d.Country.indexOf ['SOUTH AFRICA', 'AUSTRALIA', 'USA'] > -1 ){
+        return 0;
+    } else {
+        return 1;
+    }
+});
+
+
+
+
        dc.renderAll();
 
 
 
 }
+
+
+
+
+
+
 
 
 
