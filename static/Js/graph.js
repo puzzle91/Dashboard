@@ -192,7 +192,39 @@ totalAttacksND
        })
        .group(all);
 
-       
+
+attacksPerYearByCountryChart
+    .width(990)
+    .height(200)
+    .margins({top:10, right: 50, bottom:80, left: 50})
+    .x(d3.time.scale().domain([2006,2016]))
+    /*.xUnits(dc.units.ordinal)*/
+    .elasticY(true)
+    .yAxisLabel("Num of Attacks")
+    .xAxisLabel("Year")
+    .legend(dc.legend().x(80).y(120).itemHeight(13).gap(5))
+    .renderHorizontalGridLines(true)
+    .compose([
+        dc.lineChart(attacksPerYearByCountryChart)
+                .dimension(yearDim)
+                .colors('green')
+                .group(usaAttacksPerYear, 'USA'),
+            dc.lineChart(attacksPerYearByCountryChart)
+                .dimension(yearDim)
+                .colors('red')
+                .group(ausAttacksPerYear, 'AUSTRALIA'),
+            dc.lineChart(attacksPerYearByCountryChart)
+                .dimension(yearDim)
+                .colors('blue')
+                .group(saAttacksPerYear, 'SOUTH AFRICA'),
+            dc.lineChart(attacksPerYearByCountryChart)
+                .dimension(yearDim)
+                .colors('black')
+                .group(otherAttacksPerYear, 'OTHER')
+        ])
+    .brushOn(true);       
+
+
 var attacksPerYearByCountryChart = dc.compositeChart("#attacks-per-year");
 
 
