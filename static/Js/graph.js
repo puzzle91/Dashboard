@@ -206,19 +206,19 @@ attacksPerYearByCountryChart
     .renderHorizontalGridLines(true)
     .compose([
         dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(yearDim)
+                .dimension(YearsDim)
                 .colors('green')
                 .group(usaAttacksPerYear, 'USA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(yearDim)
+                .dimension(YearsDim)
                 .colors('red')
                 .group(ausAttacksPerYear, 'AUSTRALIA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(yearDim)
+                .dimension(YearsDim)
                 .colors('blue')
                 .group(saAttacksPerYear, 'SOUTH AFRICA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(yearDim)
+                .dimension(Yearsdim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER')
         ])
