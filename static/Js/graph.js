@@ -5,11 +5,11 @@ queue()
 function makeGraphs(error, sharkJson) {
 
 
-//    var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
-//    sharkJson.forEach(function (d) {
-//        d["Date"] = dateFormat.parse(d["Date"]);
-//        d["Date"].setDate(1);
-//        });
+   var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
+   sharkJson.forEach(function (d) {
+       d["Date"] = dateFormat.parse(d["Date"]);
+       d["Date"].setDate(1);
+       });
   
    //Create a Crossfilter instance
    var ndx = crossfilter(sharkJson);
