@@ -250,7 +250,7 @@ attacksPerYearByCountryChart
                 .colors('blue')
                 .group(saAttacksPerYear, 'SOUTH AFRICA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(Yearsdim)
+                .dimension(YearsDim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER')
         ])
