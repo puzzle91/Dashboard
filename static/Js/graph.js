@@ -200,21 +200,21 @@ var usaAttacksPerYear = YearsDim.group().reduceSum(function (d){
     if (d.Country === 'USA'){
         return 1;
     } else {
-        return 0;
+        return false;
     }
 });
 var ausAttacksPerYear = YearsDim.group().reduceSum(function (d){
     if (d.Country === 'AUSTRALIA'){
         return 1;
     } else {
-        return 0;
+        return false;
     }
 });
 var saAttacksPerYear = YearsDim.group().reduceSum(function (d){
     if (d.Country === 'SOUTH AFRICA'){
         return 1;
     } else {
-        return 0;
+        return false;
     }
 });
 var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
