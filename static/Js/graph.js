@@ -218,8 +218,8 @@ var saAttacksPerYear = YearsDim.group().reduceSum(function (d){
     }
 });
 var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
-    if (d.Country.indexOf ['SOUTH AFRICA', 'AUSTRALIA', 'USA'] > -1 ){
-        return 0;
+    if (d.Country.indexOf ['SOUTH AFRICA', 'AUSTRALIA', 'USA'] > 0 ){
+        return false;
     } else {
         return 1;
     }
