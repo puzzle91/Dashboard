@@ -196,28 +196,28 @@ totalAttacksND
  var attacksPerYearByCountryChart = dc.compositeChart("#attacks-per-year");
 
 
-var usaAttacksPerYear = YearsDim.group().reduceSum(function (d){
+var usaAttacksPerYear = dateDim.group().reduceSum(function (d){
     if (d.Country === 'USA'){
         return 1;
     } else {
         return false;
     }
 });
-var ausAttacksPerYear = YearsDim.group().reduceSum(function (d){
+var ausAttacksPerYear = dateDim.group().reduceSum(function (d){
     if (d.Country === 'AUSTRALIA'){
         return 1;
     } else {
         return false;
     }
 });
-var saAttacksPerYear = YearsDim.group().reduceSum(function (d){
+var saAttacksPerYear = dateDim.group().reduceSum(function (d){
     if (d.Country === 'SOUTH AFRICA'){
         return 1;
     } else {
         return false;
     }
 });
-var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
+var otherAttacksPerYear = dateDim.group().reduceSum(function (d){
     if (d.Country.indexOf ['SOUTH AFRICA', 'AUSTRALIA', 'USA'] > 0 ){
         return false;
     } else {
@@ -238,19 +238,19 @@ attacksPerYearByCountryChart
     .renderHorizontalGridLines(true)
     .compose([
         dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(YearsDim)
+                .dimension(dateDim)
                 .colors('green')
                 .group(usaAttacksPerYear, 'USA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(YearsDim)
+                .dimension(dateDim)
                 .colors('red')
                 .group(ausAttacksPerYear, 'AUSTRALIA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(YearsDim)
+                .dimension(dateDim)
                 .colors('blue')
                 .group(saAttacksPerYear, 'SOUTH AFRICA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(YearsDim)
+                .dimension(dateDim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER')
         ])
