@@ -229,12 +229,12 @@ attacksPerYearByCountryChart
     .width(1400)
     .height(400)
     .margins({top:10, right: 50, bottom:80, left: 50})
-    .x(d3.time.scale().domain([2006,2008]))
+    .x(d3.time.scale().domain([2006,2016]))
     /*.xUnits(dc.units.ordinal)*/
     .elasticY(true)
     .yAxisLabel("Num of Attacks")
     .xAxisLabel("Year")
-    .legend(dc.legend().x(80).y(120).itemHeight(13).gap(2))
+    .legend(dc.legend().x(80).y(120).itemHeight(13).gap(5))
     .renderHorizontalGridLines(true)
     .compose([
         dc.lineChart(attacksPerYearByCountryChart)
