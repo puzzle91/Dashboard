@@ -226,7 +226,7 @@ var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
 });      
 
 attacksPerYearByCountryChart
-    .width(2500)
+    .width(1400)
     .height(400)
     .margins({top:10, right: 50, bottom:80, left: 50})
     .x(d3.time.scale().domain([2006,2016]))
