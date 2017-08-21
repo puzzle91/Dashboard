@@ -76,7 +76,7 @@ function makeGraphs(error, sharkJson) {
 var CountryBarChart = dc.barChart("#bar-chart-attack");
   
    CountryBarChart
-       .width(2400)
+       .width(1400)
        .height(400)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(Country)
@@ -93,7 +93,7 @@ var ActivityBarChart = dc.barChart("#bar-chart-activity");
 
 
     ActivityBarChart
-    .width(2400)
+    .width(1400)
        .height(400)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(Activity)
@@ -144,7 +144,7 @@ var AreaChart = dc.pieChart("#area-chart")
 
 var YearChart = dc.lineChart("#years-chart")  
     YearChart
-    .width(2400)
+    .width(1400)
        .height(400)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(dateDim)
@@ -165,7 +165,7 @@ var SpeciesBarChart = dc.barChart("#bar-chart-species");
 
 
     SpeciesBarChart
-    .width(2400)
+    .width(1400)
        .height(400)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(SpeciesDim)
@@ -226,7 +226,7 @@ var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
 });      
 
 attacksPerYearByCountryChart
-    .width(2400)
+    .width(1400)
     .height(400)
     .margins({top:10, right: 50, bottom:80, left: 50})
     .x(d3.time.scale().domain([2006,2016]))
