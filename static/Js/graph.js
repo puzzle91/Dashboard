@@ -234,7 +234,7 @@ attacksPerYearByCountryChart
     .elasticY(true)
     .yAxisLabel("Num of Attacks")
     .xAxisLabel("Year")
-    .legend(dc.legend().x(80).y(120).itemHeight(13).gap(5).itemWidth(100))
+    .legend(dc.legend().x(80).y(120).itemHeight(13).gap(25))
     .renderHorizontalGridLines(true)
     .compose([
         dc.lineChart(attacksPerYearByCountryChart)
