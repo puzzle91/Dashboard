@@ -93,7 +93,7 @@ var ActivityBarChart = dc.barChart("#bar-chart-activity");
 
 
     ActivityBarChart
-    .width(1400)
+    .width(2000)
        .height(400)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(Activity)
@@ -226,7 +226,7 @@ var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
 });      
 
 attacksPerYearByCountryChart
-    .width(1400)
+    .width(2500)
     .height(400)
     .margins({top:10, right: 50, bottom:80, left: 50})
     .x(d3.time.scale().domain([2006,2016]))

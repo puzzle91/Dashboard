@@ -94,6 +94,13 @@ background {
     color:white
 }
 
+#total-attacks {
+    padding-bottom:50px;
+    padding-left: 15px;
+    color:white
+}
+
+
 .animationload {
     background-color: #fff;
     height: 100%;
@@ -104,7 +111,7 @@ background {
     z-index: 10000;
 }
 .osahanloading {
-    animation: 1.5s linear 0s normal none infinite running osahanloading;
+    animation: 1.5s linear 0s normal none running osahanloading;
     background: #fed37f none repeat scroll 0 0;
     border-radius: 50px;
     height: 50px;
@@ -116,7 +123,7 @@ background {
     width: 50px;
 }
 .osahanloading::after {
-    animation: 1.5s linear 0s normal none infinite running osahanloading_after;
+    animation: 1.5s linear 0s normal none running osahanloading_after;
     border-color: #85d6de transparent;
     border-radius: 80px;
     border-style: solid;
