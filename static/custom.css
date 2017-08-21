@@ -19,7 +19,7 @@ border-radius: 5px;
 
 #bar-chart-activity .x.axis text    { 
         text-anchor: end !important;     
-        transform: rotate(-30deg);
+        transform: rotate(-33deg);
         color:white
          }    
 
