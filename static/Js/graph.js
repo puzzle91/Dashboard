@@ -230,7 +230,7 @@ attacksPerYearByCountryChart
     .height(400)
     .margins({top:10, right: 50, bottom:80, left: 50})
     .x(d3.time.scale(10).domain([2006,2016]))
-    .xUnits(dc.units.ordinal)
+    /*.xUnits(dc.units.ordinal)*/
     .elasticY(true)
     .yAxisLabel("Num of Attacks")
     .xAxisLabel("Year")
