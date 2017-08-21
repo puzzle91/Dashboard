@@ -196,28 +196,28 @@ totalAttacksND
  var attacksPerYearByCountryChart = dc.compositeChart("#attacks-per-year");
 
 
-var usaAttacksPerYear = dateDim.group().reduceSum(function (d){
+var usaAttacksPerYear = YearsDim.group().reduceSum(function (d){
     if (d.Country === 'USA'){
         return 1;
     } else {
         return false;
     }
 });
-var ausAttacksPerYear = dateDim.group().reduceSum(function (d){
+var ausAttacksPerYear = YearsDim.group().reduceSum(function (d){
     if (d.Country === 'AUSTRALIA'){
         return 1;
     } else {
         return false;
     }
 });
-var saAttacksPerYear = dateDim.group().reduceSum(function (d){
+var saAttacksPerYear = YearsDim.group().reduceSum(function (d){
     if (d.Country === 'SOUTH AFRICA'){
         return 1;
     } else {
         return false;
     }
 });
-var otherAttacksPerYear = dateDim.group().reduceSum(function (d){
+var otherAttacksPerYear = YearsDim.group().reduceSum(function (d){
     if (d.Country.indexOf ['SOUTH AFRICA', 'AUSTRALIA', 'USA'] > 0 ){
         return false;
     } else {
@@ -229,28 +229,28 @@ attacksPerYearByCountryChart
     .width(1400)
     .height(400)
     .margins({top:10, right: 50, bottom:80, left: 50})
-    .x(d3.time.scale().domain([2006,2016]))
+    .x(d3.time.scale().domain([2006,2008]))
     /*.xUnits(dc.units.ordinal)*/
     .elasticY(true)
     .yAxisLabel("Num of Attacks")
     .xAxisLabel("Year")
-    .legend(dc.legend().x(80).y(120).itemHeight(13).gap(5))
+    .legend(dc.legend().x(80).y(120).itemHeight(13).gap(2))
     .renderHorizontalGridLines(true)
     .compose([
         dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(dateDim)
+                .dimension(YearsDim)
                 .colors('green')
                 .group(usaAttacksPerYear, 'USA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(dateDim)
+                .dimension(YearsDim)
                 .colors('red')
                 .group(ausAttacksPerYear, 'AUSTRALIA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(dateDim)
+                .dimension(YearsDim)
                 .colors('blue')
                 .group(saAttacksPerYear, 'SOUTH AFRICA'),
             dc.lineChart(attacksPerYearByCountryChart)
-                .dimension(dateDim)
+                .dimension(YearsDim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER')
         ])
