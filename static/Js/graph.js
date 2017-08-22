@@ -90,6 +90,11 @@ var CountryBarChart = dc.barChart("#bar-chart-attack");
 
 var ActivityBarChart = dc.barChart("#bar-chart-activity");
 
+// x and y Axis are variable, so they get called here. 
+let _x = this._x;  
+
+let _y = this._y;
+
 
     ActivityBarChart
     .width(1400)
@@ -252,7 +257,7 @@ attacksPerYearByCountryChart
                 .dimension(YearsDim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER'),
-                chart.yAxis().tickFormat(d3.format('5'))
+                chart.yAxis().tickFormat(5)
         ])
     .brushOn(true);       
 
