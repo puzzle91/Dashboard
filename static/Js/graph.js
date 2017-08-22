@@ -90,18 +90,30 @@ var CountryBarChart = dc.barChart("#bar-chart-attack");
 
 var ActivityBarChart = dc.barChart("#bar-chart-activity");
 
-// x and y Axis are variable, so they get called here. 
-let _x = this._x;  
+// trying to reduce x axis by creating a combined group
 
-let _y = this._y;
+
+spendData.forEach(function(d) {
+    d.Activity = d.Activity.match(/\d+/);
+    d.numperactivity = d.numperactivity.match(/\d+/);
+});
+function remove_empty_bins(source_group) {
+    return {
+        all:function () {
+            return source_group.all().filter(function(d) {
+                return d.value != 0;
+            });
+            nonEmptyNum = remove_empty_bins(numperactivity)
+            nonEmptyAct = remove_empty_bins(Activity)
+                    
 
 
     ActivityBarChart
     .width(1400)
        .height(400)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
-       .dimension(Activity)
-       .group(numperactivity)
+       .dimension(nonEmptyAct)
+       .group(nonEmptyNum)
        .transitionDuration(500)
        .x(d3.scale.ordinal())
        .xUnits(dc.units.ordinal)       
