@@ -251,7 +251,8 @@ attacksPerYearByCountryChart
             dc.lineChart(attacksPerYearByCountryChart)
                 .dimension(YearsDim)
                 .colors('black')
-                .group(otherAttacksPerYear, 'OTHER')
+                .group(otherAttacksPerYear, 'OTHER'),
+                chart.yAxis().tickFormat(d3.format('1'))
         ])
     .brushOn(true);       
 
