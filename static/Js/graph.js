@@ -9,11 +9,6 @@ function makeGraphs(error, sharkJson) {
     }
 
 
-   var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
-   sharkJson.forEach(function (d) {
-       d["Date"] = dateFormat.parse(d["Date"]);
-       d["Country"] = +d["Country"];
-       });
   
    //Create a Crossfilter instance
    var ndx = crossfilter(sharkJson);
