@@ -105,7 +105,7 @@ function remove_empty_bins(source_group) {
             });
             nonEmptyNum = remove_empty_bins(numperactivity)
             nonEmptyAct = remove_empty_bins(Activity)
-        });
+        }
     }
 }; 
 }
