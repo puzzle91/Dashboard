@@ -121,8 +121,7 @@ var ActivityBarChart = dc.barChart("#bar-chart-activity");
        .xUnits(dc.units.ordinal)       
        .elasticY(true)
        .xAxisLabel("")
-       .yAxis().ticks(4)
-       .xAxis().ticks(4);
+
 
 
 var TypeChart = dc.pieChart("#injury-chart")
