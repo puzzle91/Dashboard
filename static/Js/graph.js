@@ -107,7 +107,11 @@ let _y = this._y;
        .xUnits(dc.units.ordinal)       
        .elasticY(true)
        .xAxisLabel("")
-       .yAxis().ticks(4);
+       .yAxis().ticks(4)
+       .elasticX(false)
+       .x(d3.scale.linear().domain([0, 100]))
+       .xAxis().ticks(4);
+
 
 var TypeChart = dc.pieChart("#injury-chart")
 
@@ -257,7 +261,7 @@ attacksPerYearByCountryChart
                 .dimension(YearsDim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER'),
-                chart.yAxis().tickFormat(5)
+                chart.yAxis().tickFormat(d3.format('5'))
         ])
     .brushOn(true);       
 
