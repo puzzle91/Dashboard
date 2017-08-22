@@ -252,7 +252,7 @@ attacksPerYearByCountryChart
                 .dimension(YearsDim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER'),
-                chart.yAxis().tickFormat(d3.format('1'))
+                chart.yAxis().tickFormat(d3.format('5'))
         ])
     .brushOn(true);       
 
