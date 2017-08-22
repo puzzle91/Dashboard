@@ -3,13 +3,18 @@ queue()
    .await(makeGraphs);
  
 function makeGraphs(error, sharkJson) {
+     if (error) {
+        console.error("makeGraphs error on receiving dataset:", error.statusText);
+        throw error;
+    }
 
 
-//    var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
-//    sharkJson.forEach(function (d) {
-//        d["Date"] = dateFormat.parse(d["Date"]);
-//        d["Date"].setDate(1);
-//        });
+   var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
+   sharkJson.forEach(function (d) {
+       d["Date"] = dateFormat.parse(d["Date"]);
+       d["Date"].setDate(1);
+       d["Country"] = +d["Country"];
+       });
   
    //Create a Crossfilter instance
    var ndx = crossfilter(sharkJson);
@@ -229,7 +234,7 @@ attacksPerYearByCountryChart
     .width(1400)
     .height(400)
     .margins({top:10, right: 50, bottom:80, left: 50})
-    .x(d3.time.scale(10).domain([2006,2016]))
+    .x(d3.time.scale().domain([minDate,maxDate]))
     /*.xUnits(dc.units.ordinal)*/
     .elasticY(true)
     .yAxisLabel("Num of Attacks")
