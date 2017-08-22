@@ -117,7 +117,6 @@ var ActivityBarChart = dc.barChart("#bar-chart-activity");
        .dimension(Activity)
        .group(numperactivity)
        .transitionDuration(500)
-       .x(d3.scale.ordinal())
        .xUnits(dc.units.ordinal)       
        .elasticY(true)
        .xAxisLabel("")
