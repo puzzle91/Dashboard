@@ -92,23 +92,22 @@ var ActivityBarChart = dc.barChart("#bar-chart-activity");
 
 // trying to reduce x axis by creating a combined group
 
-
-spendData.forEach(function(d) {
-    d.Activity = d.Activity.match(/\d+/);
-    d.numperactivity = d.numperactivity.match(/\d+/);
-});
-function remove_empty_bins(source_group) {
-    return {
-        all:function () {
-            return source_group.all().filter(function(d) {
-                return d.value != 0;
-            });
-            nonEmptyNum = remove_empty_bins(numperactivity)
-            nonEmptyAct = remove_empty_bins(Activity)
-        }
-    }
-}; 
-}
+// spendData.forEach(function(d) {
+//     d.Activity = d.Activity.match(/\d+/);
+//     d.numperactivity = d.numperactivity.match(/\d+/);
+// });
+// function remove_empty_bins(source_group) {
+//     return {
+//         all:function () {
+//             return source_group.all().filter(function(d) {
+//                 return d.value != 0;
+//             });
+//             nonEmptyNum = remove_empty_bins(numperactivity)
+//             nonEmptyAct = remove_empty_bins(Activity)
+//         }
+//     }
+// }; 
+// }
 
 
     ActivityBarChart
