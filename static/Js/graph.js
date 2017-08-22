@@ -252,6 +252,7 @@ attacksPerYearByCountryChart
     /*.xUnits(dc.units.ordinal)*/
     .elasticY(true)
     .yAxisLabel("Num of Attacks")
+    .yAxis().tickFormat(d3.format('5'))
     .xAxisLabel("Year")
     .legend(dc.legend().x(80).y(120).itemHeight(13).gap(10))
     .renderHorizontalGridLines(true)
@@ -272,7 +273,7 @@ attacksPerYearByCountryChart
                 .dimension(YearsDim)
                 .colors('black')
                 .group(otherAttacksPerYear, 'OTHER'),
-                chart.yAxis().tickFormat(d3.format('5'))
+            
         ])
     .brushOn(true);       
 
