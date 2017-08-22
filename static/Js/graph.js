@@ -122,7 +122,6 @@ var ActivityBarChart = dc.barChart("#bar-chart-activity");
        .elasticY(true)
        .xAxisLabel("")
        .yAxis().ticks(4)
-       .elasticX(false)
        .x(d3.scale.linear().domain([0, 100]))
        .xAxis().ticks(4);
 
