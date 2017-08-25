@@ -68,8 +68,7 @@ function makeGraphs(error, sharkJson) {
 
    
    //Define values (to be used in charts)
-   var minDate = dateDim.bottom(1)[0]["Date"];
-   var maxDate = dateDim.top(1)[0]["Date"];
+//  
  
    //Charts
 var CountryBarChart = dc.barChart("#bar-chart-attack");
