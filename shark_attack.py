@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 MONGODB_URI = os.environ.get('MONGODB_URI')
 DBS_NAME = os.environ.get("MONGO_DB_NAME", 'SharkAttack')
-COLLECTION_NAME = os.environ.get ('MONGO_COLLECTION_NAME', 'attacks')
+COLLECTION_NAME = os.environ.get ('MONGO_COLLECTION_NAME', 'sharkman')
 
 
  
@@ -50,7 +50,7 @@ def donor_projects():
         collection = conn[DBS_NAME][COLLECTION_NAME]
         # Retrieve a result set only with the fields defined in FIELDS
         # and limit the the results to 55000
-        projects = collection.find(projection=FIELDS, limit=450)
+        projects = collection.find(projection=FIELDS, limit=4000)
         # Convert projects to a list in a JSON object and return the JSON data
         return json.dumps(list(projects))
  
