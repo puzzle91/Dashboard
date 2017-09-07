@@ -1,21 +1,24 @@
-#bar-chart-attack .x.axis text { 
-        text-anchor: end !important;     
-        transform: rotate(-15deg);
-        color:white
-         }
+
+
 
 #bar-chart-attack {
 
-
-/*width: 1400px;*/
-/*padding: 9px 15px;*/
-/*background-color: #0e5e7f;*/
 color: white;
 margin-bottom: 20px;
 margin-top: 20px;
 border-radius: 5px;
+
 }
+
+
+/* rotates axis so that names are more visible */
+
       
+#bar-chart-attack .x.axis text { 
+    text-anchor: end !important;     
+    transform: rotate(-15deg);
+    color:white
+     }
 
 #bar-chart-activity .x.axis text    { 
         text-anchor: end !important;     
@@ -100,42 +103,3 @@ background {
     color:white
 }
 
-
-.animationload {
-    background-color: #fff;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
-}
-.osahanloading {
-    animation: 1.5s linear 0s normal none running osahanloading;
-    background: #fed37f none repeat scroll 0 0;
-    border-radius: 50px;
-    height: 50px;
-    left: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
-    position: absolute;
-    top: 50%;
-    width: 50px;
-}
-.osahanloading::after {
-    animation: 1.5s linear 0s normal none running osahanloading_after;
-    border-color: #85d6de transparent;
-    border-radius: 80px;
-    border-style: solid;
-    border-width: 10px;
-    content: "";
-    height: 80px;
-    left: -15px;
-    position: absolute;
-    top: -15px;
-    width: 80px;
-}
-@keyframes osahanloading {
-0% {
-    transform: rotate(0deg);
-}
