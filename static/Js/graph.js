@@ -9,6 +9,7 @@ function makeGraphs(error, sharkJson) {
     }
 
 
+
   
    //Create a Crossfilter instance
    var ndx = crossfilter(sharkJson);
