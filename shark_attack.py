@@ -12,8 +12,8 @@ app = Flask(__name__)
 # COLLECTION_NAME = 'attacks'
 
 MONGODB_URI = os.getenv('MONGODB_URI')
-DBS_NAME = os.getenv('MONGO_DB_NAME','SharkAttack')
-COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME','attacks2')
+DBS_NAME = os.getenv('MONGO_DB_NAME','heroku_rd8cc91l')
+COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME','SharkC')
 
 
  
