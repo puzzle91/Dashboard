@@ -11,7 +11,7 @@
 <ol>
   <li> Python </li>
   <li> Python's Flask framework - This is a micro-framework that uses the data provided from the database to render the HTML pages </li>
-  <li> HTML+CSS - Basic HTML+CSS was used to format the webpage/li>
+  <li> HTML+CSS - Basic HTML+CSS was used to format the webpage </li>
   <li> Bootstrap - The main framework for building the webpage HTML/CSS layout for the application </li>
   <li> JavaScript - crossfilter.js (JS library for two way data binding; Filters data on a section of a graph that once clicked is highlighted while other data dissipates), d3.js (JS library for rendering data into graphs that become interactive), Dc.js (JS library for helping wrap data into charts)  </li>  
   <li> MongoDB database - Non-sequential database that takes data and transforms it into JSON format. RoboMongo was used pre-process the dataset before connecting it to the web application </li> 
